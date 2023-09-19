@@ -9,4 +9,14 @@ def select_random_word(words_list) :
 word_to_guess = select_random_word(words_list)
 print(word_to_guess)
 
-blanked_word = ''
+blank = "_" * len(word_to_guess)
+print(blank)
+
+user_proposition = str(input("Proposez une lettre :"))
+
+if user_proposition in word_to_guess :
+    blank.replace("_", user_proposition)
+else :
+    print("Non.")
+
+print(blank)
