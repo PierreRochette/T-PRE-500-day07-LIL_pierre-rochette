@@ -1,27 +1,22 @@
 import random
 
-player_count = 0
-words_list = ["WAREHOUSE", "SHARINGAN", "LILLE", "PARIS", "ROUBAIX"]
-word_to_guess = words_list[random.randint(0, len(words_list) - 1)]
+words_list = ['HELLO', 'GOODBYE', 'WORLD', 'MARS', 'EARTH', 'PLEASE']
+word = words_list[random.randint(0, len(words_list) - 1)]
+blank_word = list(word)
+print(blank_word)
+player_count = len(blank_word)
+for i in range(len(blank_word)) :
+    blank_word[i] = "_"
 
-print(words_list)
-print(word_to_guess)
+# Tout fait l'effet attendu jusqu'ici. 
 
-def guessing_word (word_to_guess) :
+while player_count < 0 : 
 
-    displayed_blank = "_ " * len(word_to_guess)
-    print(displayed_blank)
+    while "_" in blank_word :
 
-    user_guess = str(input("Proposez une lettre : "))
-
-    if user_guess in word_to_guess :
-        for i in range(len(word_to_guess)) :
-            if word_to_guess[i] == user_guess :
-                displayed_blank[i] = user_guess
-
-    return None
-
-guessing_word(word_to_guess)
+        user_guess = str(input("Entrez une lettre : "))
+        if len(user_guess) > 1 :
+            print("Veuillez n'entrer qu'une seule lettre à la fois. ")
 
 
 
