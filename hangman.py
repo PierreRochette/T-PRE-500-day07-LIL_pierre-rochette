@@ -2,21 +2,42 @@ import random
 
 player_count = 0
 words_list = ["WAREHOUSE", "SHARINGAN", "LILLE", "PARIS", "ROUBAIX"]
+word_to_guess = words_list[random.randint(0, len(words_list) - 1)]
 
-def select_random_word(words_list) :
-    return words_list[random.randint(0, (len(words_list) - 1))]
-
-word_to_guess = select_random_word(words_list)
+print(words_list)
 print(word_to_guess)
 
-blank = "_" * len(word_to_guess)
-print(blank)
+def guessing_word (word_to_guess) :
 
-user_proposition = str(input("Proposez une lettre :"))
+    displayed_blank = "_ " * len(word_to_guess)
+    print(displayed_blank)
 
-if user_proposition in word_to_guess :
-    blank.replace("_", user_proposition)
-else :
-    print("Non.")
+    user_guess = str(input("Proposez une lettre : "))
 
-print(blank)
+    if user_guess in word_to_guess :
+        for i in range(len(word_to_guess)) :
+            if word_to_guess[i] == user_guess :
+                displayed_blank[i] = user_guess
+
+    return None
+
+guessing_word(word_to_guess)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

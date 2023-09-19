@@ -1,6 +1,8 @@
 ##### CES ELEMENTS ONT ÉTÉ GÉNÉRÉS PAR CHATGPT. IL S'AGIT DE COMPRENDRE
 # LA LOGIQUE À IMPLÉMENTER DANS MON CODE. 
 
+"""
+
 mot_secret = "LILLE"
 mot_affiche = ["_"] * len(mot_secret)
 
@@ -23,7 +25,17 @@ while "_" in mot_affiche:
     afficher_mot()
     deviner_lettre()
 
-while deviner_lettre() == "exit" :
-    break
 
 print("Félicitations, vous avez deviné le mot :", "".join(mot_affiche))
+
+
+"""
+
+# PETITS TESTS DE STRINGS
+
+defined_word = "TEST"
+print(defined_word)
+print(defined_word[1])
+
+word_to_create = "_ " * len(defined_word)
+print(word_to_create)
