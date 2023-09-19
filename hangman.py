@@ -1,6 +1,6 @@
 import random
 
-words_list = ['HELLO', 'GOODBYE', 'WORLD', 'MARS', 'EARTH', 'PLEASE']
+words_list = ['HELLO', 'GOODBYE', 'WORLD', 'MARS', 'EARTH', 'PLEASE', 'WAREHOUSE', 'ANTICONSTITUTIONNELLEMENT', "HIPPOPOTOMONSTROSESQUIPEDALIOPHOBIE", "EPITECH"]
 word = words_list[random.randint(0, len(words_list) - 1)]
 blank_word = list(word)
 player_count = len(blank_word)
@@ -17,9 +17,6 @@ while player_count > 0 :
 
         user_guess = str(input("Entrez une lettre : ")).upper()
         if len(user_guess) > 1 :
-
-            #CETTE PARTIE DU CODE VA ÊTRE MODIFIEE POUR PERMETTRE DE METTRE PLUSIEURS LETTRES EN MÊME TEMPS
-
             print("Veuillez n'entrer qu'une seule lettre à la fois.")
             continue
 
