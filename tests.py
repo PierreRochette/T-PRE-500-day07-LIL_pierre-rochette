@@ -32,10 +32,37 @@ print("Félicitations, vous avez deviné le mot :", "".join(mot_affiche))
 """
 
 # PETITS TESTS DE STRINGS
+"""
+defined_word = "TEST"
+print(defined_word)
+print(defined_word[1])
+
+word_to_create = "_ " * len(defined_word)
+print(word_to_create)
+
+guess = str(input("Entrez une lettre : "))
+
+if guess in defined_word :
+    for i in range(len(defined_word)) :
+        if defined_word[i] == guess :
+            word_to_create.replace("_ ", guess)
+
+print(word_to_create)
+
+"""
 
 defined_word = "TEST"
 print(defined_word)
 print(defined_word[1])
 
 word_to_create = "_ " * len(defined_word)
+print(word_to_create)
+
+guess = str(input("Entrez une lettre : "))
+
+if guess in defined_word:
+    for i in range(len(defined_word)):
+        if defined_word[i] == guess:
+            word_to_create = word_to_create[0:i] + guess + word_to_create[i+1:]
+
 print(word_to_create)
